@@ -36,6 +36,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* HelloWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HelloWorldTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		9F3EE66C1F60CA490078B1C4 /* ContactsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EE66B1F60CA490078B1C4 /* ContactsService.m */; };
+		9F3EE6971F60EA700078B1C4 /* MyEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EE6961F60EA700078B1C4 /* MyEventEmitter.m */; };
 		9FAF236A1F5D383E0015A48F /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FAF23691F5D383E0015A48F /* main.jsbundle */; };
 /* End PBXBuildFile section */
 
@@ -283,6 +285,10 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		9F3EE66A1F60CA490078B1C4 /* ContactsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsService.h; sourceTree = "<group>"; };
+		9F3EE66B1F60CA490078B1C4 /* ContactsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsService.m; sourceTree = "<group>"; };
+		9F3EE6951F60EA700078B1C4 /* MyEventEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEventEmitter.h; sourceTree = "<group>"; };
+		9F3EE6961F60EA700078B1C4 /* MyEventEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEventEmitter.m; sourceTree = "<group>"; };
 		9FAF23691F5D383E0015A48F /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = HelloWorld/main.jsbundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -425,6 +431,10 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				9F3EE6951F60EA700078B1C4 /* MyEventEmitter.h */,
+				9F3EE6961F60EA700078B1C4 /* MyEventEmitter.m */,
+				9F3EE66A1F60CA490078B1C4 /* ContactsService.h */,
+				9F3EE66B1F60CA490078B1C4 /* ContactsService.m */,
 			);
 			name = HelloWorld;
 			sourceTree = "<group>";
@@ -971,6 +981,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F3EE66C1F60CA490078B1C4 /* ContactsService.m in Sources */,
+				9F3EE6971F60EA700078B1C4 /* MyEventEmitter.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);

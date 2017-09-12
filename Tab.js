@@ -7,6 +7,7 @@ import SettingScreen from './Setting';
 import HomeScreen from './HomeScreen';
 import AllContactsScreen from './Contacts';
 import ChatScreen from './ChatsScreen';
+import Verify from './Verify';
 
 const MainScreenNavigator = TabNavigator({
   Home: {
@@ -28,6 +29,7 @@ const MainScreenNavigator = TabNavigator({
   Contacts: {
     screen: AllContactsScreen,
     navigationOptions: {
+      headerTitle:'通讯录',
       tabBarLabel: '联系人',
       tabBarIcon: ({tintColor}) => (<Image source={require('./img/tab/3.png')} style={[styles.icon]}/>)
     }
@@ -35,7 +37,8 @@ const MainScreenNavigator = TabNavigator({
   Setting: {
     screen: SettingScreen,
     navigationOptions: {
-      tabBarLabel: '设置',
+      headerTitle:'我的',
+      tabBarLabel: '我的',
       tabBarIcon: ({tintColor}) => (<Image source={require('./img/tab/4.png')} style={[styles.icon]}/>)
     }
   }
@@ -59,14 +62,19 @@ const MainScreenNavigator = TabNavigator({
 
 MainScreenNavigator.navigationOptions = {
   title: 'My Chats',
-  headerRight: <Button title="Info" onPress={() => {
-      alert('haha')
-    }}></Button>
 };
 
 const HelloWorld = StackNavigator({
   Home: {
-    screen: MainScreenNavigator
+    screen: MainScreenNavigator,
+    navigationOptions:{
+      titleStyle: {
+        alignSelf: 'center'
+      },
+    },
+  },
+  Verify:{
+    screen:Verify,
   }
 });
 
