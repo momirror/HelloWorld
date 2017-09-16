@@ -1,1 +1,1 @@
-import './Tab';
+import './App';

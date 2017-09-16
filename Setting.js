@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View, Image, StyleSheet,FlatList} from 'react-native';
 import Verify from './Verify';
+import SettingItem from './SettingItem';
 
 export default class SettingScreen extends React.Component {
 
@@ -9,18 +10,37 @@ _seperator = ()=> {
 }
 
 
- selectRow = ()=> {
+ selectRow = (item,index)=> {
    const {navigate} = this.props.navigation;
-   console.log('select row');
-   navigate('Verify');
+
+   switch (index) {
+     case 0:
+        navigate('NameScreen');
+        break;
+     case 3:
+       navigate('Verify',{title:item.key});
+       break;
+     default:
+
+   }
+
+   if(index == 3) {
+     navigate('Verify',{title:item.key});
+   }
+
+
+   console.log('this.props :'+item.key+ 'index :'+index);
 
  }
+
+ _keyExtractor = (item, index) => index;
 
   render() {
     return (<View>
       <FlatList data={[{key:'姓名'},{key:'手机号码 '},{key:'身份证'},{key:'4实名验证'},{key:'设置'}]}
-        renderItem={({item}) => <Text style={styles.item} onPress={this.selectRow}>{item.key}</Text>}
+        renderItem={({item,index}) =><SettingItem title={item.key}></SettingItem>}
         ItemSeparatorComponent = {this._seperator}
+        keyExtractor = {this._keyExtractor}
         ></FlatList>
     </View>);
 

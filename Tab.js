@@ -8,6 +8,7 @@ import HomeScreen from './HomeScreen';
 import AllContactsScreen from './Contacts';
 import ChatScreen from './ChatsScreen';
 import Verify from './Verify';
+import NameScreen from './NameScreen';
 
 const MainScreenNavigator = TabNavigator({
   Home: {
@@ -64,7 +65,7 @@ MainScreenNavigator.navigationOptions = {
   title: 'My Chats',
 };
 
-const HelloWorld = StackNavigator({
+const APPNavigator = StackNavigator({
   Home: {
     screen: MainScreenNavigator,
     navigationOptions:{
@@ -75,15 +76,20 @@ const HelloWorld = StackNavigator({
   },
   Verify:{
     screen:Verify,
+  },
+  NameScreen:{
+    screen:NameScreen,
   }
 });
 
 var styles = StyleSheet.create({
-  con: {
+  icon: {
     height: 22,
     width: 22,
     resizeMode: 'contain'
   }
 });
 
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+
+
+export {APPNavigator};

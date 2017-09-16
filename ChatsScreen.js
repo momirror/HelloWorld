@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,Image,StyleSheet,Button } from 'react-native';
+import {Text,View,Image,StyleSheet,Button,ScrollView } from 'react-native';
 
 
 class ChatScreen extends React.Component {
@@ -10,11 +10,23 @@ class ChatScreen extends React.Component {
   render() {
     // const {params} = this.props.navigation.state;
     return (
-      <View>
+      <ScrollView contentContainerStyle={styles.contentContainer} horizontal={false}
+        onScroll = {()=>{console.log('scroll start');}}
+        >
         <Text>Chat with her.</Text>
-      </View>
+        <Image source={{uri:'girl.png'}} style={{width:400,height:400}}></Image>
+        <Image source={{uri:'girl.png'}} style={{width:400,height:400}}></Image>
+        <Image source={{uri:'girl.png'}} style={{width:400,height:400}}></Image>
+      </ScrollView>
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+  contentContainer:{
+    backgroundColor:'red',
+  }
+});
 
 module.exports = ChatScreen;
