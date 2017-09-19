@@ -25,7 +25,7 @@ class ChatScreen extends React.Component {
 
 const styles = StyleSheet.create({
   contentContainer:{
-    backgroundColor:'red',
+    // backgroundColor:'red',
   }
 });
 

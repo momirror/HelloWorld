@@ -5,6 +5,11 @@ import {MyStyles,TestStyles} from './Styles';
 
 
 class AllContactsScreen extends React.Component {
+  
+  test = ()=>{
+    return 10;
+  }
+  
   render() {
     return (
       <View style={styles.container}>
